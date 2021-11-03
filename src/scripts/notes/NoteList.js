@@ -14,7 +14,8 @@ export const NoteList = () => {
             notesHTML+= note(singleObj)
         });
 
-        contentTarget.innerHTML = `<h2>Notes<h2>${notesHTML}`
+        contentTarget.innerHTML = `<h2>Notes</h2>
+        ${notesHTML}`
     })
 }
 //----------- nav bar.Note-----------//

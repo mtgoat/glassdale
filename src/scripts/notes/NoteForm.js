@@ -1,7 +1,7 @@
-import { deleteNote, saveNotes } from "./NoteDataProvider.js"
+import {deleteNote, saveNotes } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
 
-const contentTarget = document.querySelector(".noteFormContainer")
+const contentTarget = document.querySelector(".noteSaveFormContainer")
 
 export const NoteForm = () => {
     contentTarget.innerHTML = 

@@ -2,14 +2,16 @@ import { CriminalList} from "./criminals/criminalsList.js"
 import { OfficerList } from "./officers/officersList.js"
 import { LocationList} from "./locations/locationList.js"
 //import { NoteForm } from "./notes/NoteForm.js"
-//import { NoteList } from "./notes/NoteList.js"
+import { NoteList } from "./notes/NoteList.js"
 import { ConvictionSelect } from "./conviction/convictionSelect.js"
 import {OfficerSelect } from "./officers/officersSelect.js"
+import {NoteEditForm} from "./notes/NoteEditForm.js"
 //CriminalList()
 //OfficerList()
 //LocationList()
-//NoteForm ()
-//NoteList ()
+NoteForm ()
+NoteList ()
+NoteEditForm ()
 ConvictionSelect ()
 OfficerSelect ()
 //------------------dark button----------------------------//

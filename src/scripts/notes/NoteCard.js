@@ -11,3 +11,9 @@ export const note = (taco) => {
         `
 }
 
+const eventHub = document.querySelector(".noteListContainer")
+eventHub.addEventListener("click", (eventObject) => {
+
+    const noteId = +eventObject.target.id.split("--")[1]
+    NoteEditForm(noteId);
+})
