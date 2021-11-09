@@ -1,17 +1,19 @@
 import { CriminalList} from "./criminals/criminalsList.js"
 import { OfficerList } from "./officers/officersList.js"
 import { LocationList} from "./locations/locationList.js"
-//import { NoteForm } from "./notes/NoteForm.js"
-//import { NoteList } from "./notes/NoteList.js"
+import { NoteForm } from "./notes/NoteForm.js"
+import { NoteList } from "./notes/NoteList.js"
 import { ConvictionSelect } from "./conviction/convictionSelect.js"
 import {OfficerSelect } from "./officers/officersSelect.js"
+
+
 //CriminalList()
 //OfficerList()
 //LocationList()
-//NoteForm ()
-//NoteList ()
-ConvictionSelect ()
-OfficerSelect ()
+NoteForm ()
+NoteList ()
+//ConvictionSelect ()
+//OfficerSelect ()
 //------------------dark button----------------------------//
 //const darkModeButton = document.querySelector("#dark-mode")
 
