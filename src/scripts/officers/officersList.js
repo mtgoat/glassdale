@@ -4,7 +4,7 @@ import { getOfficers, UseOfficers, } from "./officersDataProvider.js";
 const contentTarget = document.querySelector(".content-container")
 
 export const OfficerList = (taco) => {
-    let officerListContainer = document.querySelector("")
+    let officerListContainer = document.querySelector(".officer-list")
     getOfficers ()
     .then (() => {
 
