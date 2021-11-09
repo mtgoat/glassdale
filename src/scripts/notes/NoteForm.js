@@ -1,6 +1,8 @@
 import { deleteNote, saveNotes } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
 
+//location of where the form and the save button is placed. 
+
 const contentTarget = document.querySelector(".noteFormContainer")
 
 export const NoteForm = () => {
@@ -22,7 +24,8 @@ export const NoteForm = () => {
 
 //below is a function to send the new data to the JSON server
 //const Andy = () => {
-  
+
+
     contentTarget.addEventListener("click", clickEvent => {
          if (clickEvent.target.id === "saveNote") {
             //let entrySuspect = 
@@ -55,23 +58,9 @@ export const NoteForm = () => {
 //}
 
 //window.onload this waits until everything on the page is loaded
+
 //below is the addEventListener to delete the entry - future topic - using click two event, add confirmation 
-const eventHub = document.querySelector(".content-container")
 
-eventHub.addEventListener("click", removeEvent => {
-  if (removeEvent.target.id.startsWith("deleteNote")) {
-    
-    const idToDelete = removeEvent.target.id.split("--")[1]
-    // ---------- Write your code here -------------//
-    // Call the deleteNote function and pass in the appropriate id
-    
-    //console.log(idToDelete)
-    deleteNote (idToDelete)
-    .then(NoteList)
-    // Then call NoteList to refresh the list of notes
-
-  }
-});
 
 // below is the edit addenent function
 const eventHub = document.querySelector(".note-list")
