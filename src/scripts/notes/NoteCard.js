@@ -2,7 +2,7 @@ import { deleteNote } from "./NoteDataProvider.js";
 import { NoteList } from "./NoteList.js";
 export const note = (taco) => {
     return `
-    <div class="col-sm-3 border border-dark m-3 list-group-item">
+    <div class="noteCard">
     <h3>Suspect: ${taco.suspect}</h3>
     <p>Date: ${taco.dateOfNote}</p>
     <p>Note : ${taco.noteText}</p>
@@ -12,12 +12,12 @@ export const note = (taco) => {
         `
 }
 
-const eventHub = document.querySelector(".noteListContainer")
-eventHub.addEventListener("click", (eventObject) => {
+// const eventHub = document.querySelector(".noteListContainer")
+// eventHub.addEventListener("click", (eventObject) => {
 
-    const noteId = +eventObject.target.id.split("--")[1]
-    NoteEditForm(noteId);
-})
+//     const noteId = +eventObject.target.id.split("--")[1]
+//     NoteEditForm(noteId);
+// })
 const eventHub = document.querySelector(".content-container")
 
 eventHub.addEventListener("click", removeEvent => {

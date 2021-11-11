@@ -23,6 +23,11 @@ li {
     background-color: #2b362e;
     color: #fafcfb;
   }
+
+  .hidden{
+      display:none;
+      
+  }
   .readMore {
       
   }
