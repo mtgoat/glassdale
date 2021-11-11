@@ -1,5 +1,7 @@
 import {deleteNote, saveNotes } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
+import { NoteEditForm } from "./NoteEditForm.js"
+
 
 const contentTarget = document.querySelector(".noteListContainer")
 
@@ -20,15 +22,17 @@ export const NoteForm = () => {
 }
 // the avobe is a form where new data will be entered. 
 
-//below is a function to send the new data to the JSON server
+//below is a function to send the new data to the JSON servedr
 //const Andy = () => {
 const navBarNote = document.querySelector("#notes-nav-link")
+const saveContentTarget = document.querySelector(".noteListContainer")
 
-navBarNote.addEventListener("click", clickEvent => {
+saveContentTarget.addEventListener("click", clickEvent => {
+    
          if (clickEvent.target.id === "saveNote") {
             //let entrySuspect = 
             //let entryText = document.querySelector("#noteEntry").value 
-           //  console.dir(entryDate)
+            console.log("you clicked")
     
              // Make a new object representation of a note
              const newNote = { 
@@ -38,7 +42,7 @@ navBarNote.addEventListener("click", clickEvent => {
                   suspect: document.querySelector("#noteSuspect").value
                  
      }
-    //console.log(newNote)
+    console.log(newNote)
     //below clears the input field after the save button is pushed
         document.querySelector("#noteDate").value = ""
         document.querySelector("#noteEntry").value = ""
@@ -60,10 +64,3 @@ navBarNote.addEventListener("click", clickEvent => {
 //below is the addEventListener to delete the entry - future topic - using click two event, add confirmation 
 
 
-// below is the edit addenent function
-const eventHub = document.querySelector(".note-list")
-eventHub.addEventListener("click", (eventObject) => {
-
-    const noteId = +eventObject.target.id.split("--")[1]
-    NoteEditForm(noteId);
-})
