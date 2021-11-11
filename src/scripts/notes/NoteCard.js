@@ -1,10 +1,12 @@
 import { deleteNote } from "./NoteDataProvider.js";
 import { NoteList } from "./NoteList.js";
+import { NoteEditForm } from "./NoteEditForm.js";
+
 export const note = (taco) => {
     return `
     <div class="noteCard">
     <h3>Suspect: ${taco.suspect}</h3>
-    <p>Date: ${taco.dateOfNote}</p>
+    <p>Date: ${new Date (taco.dateOfNote).toLocaleDateString('en-US')}</p>
     <p>Note : ${taco.noteText}</p>
     <button id="deleteNote--${taco.id}">Delete</button>
     <button id="edit--${taco.id}">Edit</button>
@@ -34,3 +36,13 @@ eventHub.addEventListener("click", removeEvent => {
 
   }
 });
+ //this notecard is same as the note.js
+// below is the edit  function
+const eventHubEdit = document.querySelector(".content-container")
+
+eventHubEdit.addEventListener("click", (eventObject) => {
+  const noteId =+ eventObject.target.id.split("--")[1]
+    console.log(noteId)
+    // 
+    NoteEditForm(noteId)
+})
