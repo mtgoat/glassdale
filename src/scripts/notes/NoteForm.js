@@ -2,7 +2,6 @@ import {deleteNote, saveNotes } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
 import { NoteEditForm } from "./NoteEditForm.js"
 
-
 const contentTarget = document.querySelector(".noteListContainer")
 
 export const NoteForm = () => {
@@ -62,5 +61,4 @@ saveContentTarget.addEventListener("click", clickEvent => {
 //window.onload this waits until everything on the page is loaded
 
 //below is the addEventListener to delete the entry - future topic - using click two event, add confirmation 
-
 
