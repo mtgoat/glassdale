@@ -1,4 +1,5 @@
-import {useNotes} from "./NoteDataProvider.js"
+import {useNotes, updateNote} from "./NoteDataProvider.js"
+import {NoteList} from "./NoteList.js"
 
 // We're going to print the edit form where the "add note" form usually goes. We could move it around on the page by changing our content target.
 const contentTarget = document.querySelector(".noteFormContainer")

@@ -1,5 +1,7 @@
 import { deleteNote } from "./NoteDataProvider.js";
 import { NoteList } from "./NoteList.js";
+import { NoteEditForm } from "./NoteEditForm.js";
+
 export const note = (taco) => {
     return `
     <div class="noteCard">
@@ -34,3 +36,16 @@ eventHub.addEventListener("click", removeEvent => {
 
   }
 });
+
+
+
+// below is the edit addenent function
+
+const eventHub = document.querySelector(".note-list")
+
+eventHub.addEventListener("click", (eventObject) => {
+
+    const noteId =+ eventObject.target.id.split("--")[1]
+
+    NoteEditForm(noteId);
+})
