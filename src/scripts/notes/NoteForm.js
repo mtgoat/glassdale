@@ -1,9 +1,7 @@
-import { deleteNote, saveNotes } from "./NoteDataProvider.js"
+import {deleteNote, saveNotes } from "./NoteDataProvider.js"
 import { NoteList } from "./NoteList.js"
 
-//location of where the form and the save button is placed. 
-
-const contentTarget = document.querySelector(".noteFormContainer")
+const contentTarget = document.querySelector(".noteListContainer")
 
 export const NoteForm = () => {
     contentTarget.innerHTML = 
@@ -24,9 +22,9 @@ export const NoteForm = () => {
 
 //below is a function to send the new data to the JSON server
 //const Andy = () => {
+const navBarNote = document.querySelector("#notes-nav-link")
 
-
-    contentTarget.addEventListener("click", clickEvent => {
+navBarNote.addEventListener("click", clickEvent => {
          if (clickEvent.target.id === "saveNote") {
             //let entrySuspect = 
             //let entryText = document.querySelector("#noteEntry").value 

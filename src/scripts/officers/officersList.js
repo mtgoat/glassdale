@@ -1,10 +1,10 @@
 import { Officer } from "./officers.js";
 import { getOfficers, UseOfficers, } from "./officersDataProvider.js";
 
-const contentTarget = document.querySelector(".content-container")
+
 
 export const OfficerList = (taco) => {
-    let officerListContainer = document.querySelector(".officer-list")
+   const officerListContainer = document.querySelector(".content-container")
     getOfficers ()
     .then (() => {
 
@@ -17,7 +17,7 @@ export const OfficerList = (taco) => {
             officerHTML += Officer(singleOfficerObj);
         });
 
-        contentTarget.innerHTML = `<h2>List of Officers</h2><div class="offiFlex">${officerHTML}</div>`
+        officerListContainer.innerHTML = `<h2>List of Officers</h2><div class="offiFlex">${officerHTML}</div>`
     })
 }
 

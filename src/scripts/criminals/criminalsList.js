@@ -1,11 +1,11 @@
 import { criminal } from "./criminals.js";
 import { useCriminals, getCriminals } from "./criminalsDataProvider.js";
 
-const contentTarget = document.querySelector(".content-container")
 
+const criminalListContainer = document.querySelector(".content-container");
 export const CriminalList = (dropdownSelector, chosenFilter) => {
-    let criminalListContainer = document.querySelector(".criminal-list");
-    criminalListContainer.innerHTML = ""
+    
+    criminalListContainer.innerHTML = `<h2>List of People with Convictions</h2>`
 
     getCriminals ()
     .then (() => {
