@@ -16,6 +16,7 @@ export const NoteList = () => {
         });
         
         contentTarget.innerHTML = `
+        
         <h2>Notes</h2>
         ${notesHTML}`
     })
