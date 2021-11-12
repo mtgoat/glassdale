@@ -1,5 +1,6 @@
 import {note} from "./NoteCard.js"
-import {useNotes, getNotes, saveNotes} from "./NoteDataProvider.js"
+import {useNotes, getNotes} from "./NoteDataProvider.js"
+import { NoteForm } from "./NoteForm.js"
 // Handle browser-generated click event in component
 const contentTarget = document.querySelector(".content-container")
 
@@ -13,8 +14,9 @@ export const NoteList = () => {
         notesArray.forEach((singleObj) => {
             notesHTML+= note(singleObj)
         });
-
-        contentTarget.innerHTML = `<h2>Notes</h2>
+        
+        contentTarget.innerHTML = `
+        <h2>Notes</h2>
         ${notesHTML}`
     })
 }

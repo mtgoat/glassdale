@@ -2,21 +2,21 @@
   "notes": [
     {
       "id": 1,
-      "noteText": "Panda Panda",
+      "noteText": "Panda Panda Panda",
       "suspect": "Madelyn Lebsack",
       "dateOfNote": "2021-10-13"
     },
     {
       "id": 2,
-      "dateOfNote": "2021-10-12",
-      "noteText": "This is test 2",
-      "suspect": "Michel Stamm"
+      "noteText": "Cat Cat",
+      "suspect": "Michel Stamm",
+      "dateOfNote": "2021-10-12"
     },
     {
       "id": 3,
-      "dateOfNote": "2021-10-28",
       "noteText": "This is test 3",
-      "suspect": "Taurean Bins"
+      "suspect": "Taurean Bins",
+      "dateOfNote": "2021-10-28"
     },
     {
       "id": 4,

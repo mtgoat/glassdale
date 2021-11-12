@@ -38,11 +38,20 @@ eventHub.addEventListener("click", removeEvent => {
 });
  //this notecard is same as the note.js
 // below is the edit  function
-const eventHubEdit = document.querySelector(".content-container")
 
-eventHubEdit.addEventListener("click", (eventObject) => {
+eventHub.addEventListener("click", (eventObject) => {
   const noteId =+ eventObject.target.id.split("--")[1]
     console.log(noteId)
     // 
     NoteEditForm(noteId)
 })
+
+/*Tommy's addevent variation with querySelector = body with if specification
+
+const eventHub = document.querySelector("body")
+eventHub.addEventListener("click", (eventObject) => {
+    if(eventObject.target.id.startsWith("edit--")){
+    const noteId = +eventObject.target.id.split("--")[1]
+    NoteEditForm(noteId);
+    }
+}) */
